@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<title>justموقع</title>
+
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #2e0303c2;
+             text-align: center; 
+            margin: 100px;
+        }
+        /* تنسيق الحاوية الرئيسية لجعل الحاويتين متقابلتين */
+        .main-wrapper {
+            display: flex;
+            gap: 20px; /* مسافة بين الحاويتين */
+            margin-top: 200px;
+            font-family:inherit, sans-serif;
+        }
+
+        /* تنسيق موحد للحاويات */
+        .box {
+            border: 2px solid #a76d6d;
+            padding: 20px;
+            width: 250px;
+            border-radius: 8px;
+            background-color: #c4a3a3;
+        }
+
+        /* إخفاء حاوية الحلويات افتراضياً عند تحميل الصفحة */
+        #sweetsContainer {
+            display: none;
+            background-color: #96736f;
+            border-color: #b17784;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body dir="rtl">
+
+
+ اضهار التربيع = <button onclick="square()" id="btn">square</button>
+<br>
+ اضهار التاريخ = <button onclick="showDate()" id="btn2">showDate</button>
+
+ 
+    <p id="myBox" > النص الاصلي </p><br>
+ <button onclick="addNewElement()">اضف حاويه نصية</button>
+ <div class="main-wrapper" id="aaa">
+    
+        <!-- الحاوية الأولى: تحتوي على زر الإظهار -->
+        <div class="box">
+            <h3>لوحة التحكم</h3>
+            <button onclick="showMenu()">إظهار قائمة الأصناف</button>
+        </div>
+        <!-- الحاوية الثانية (المقابلة): تحتوي على قائمة المسلسلات وزر الإخفاء -->
+        <div class="box" id="sweetsContainer" >
+            <h3>قائمة أصناف kdrama </h3>
+            <ul>
+                <li>الفأر </li>
+                <li>واجب مابعد المدرسه </li>
+                <li>الطبيب الشبح</li>
+                <li>عندما تمنحك الحياة ثمار اليوسفي </li>
+                <li>صيد خارج لحلبه </li>
+            </ul>
+            <button onclick="hideMenu()">إخفاء</button>
+        </div>
+
+    </div>
+
+</body>
+<script src="2.js">1</script>
+</html>
